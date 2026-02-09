@@ -32,8 +32,8 @@ function validateClientIP(socket) {
   }
   const clientIP = ip.split(":").pop();
 
-  console.log("clientIP", clientIP);
-  console.log("ALLOWED_IP", ALLOWED_IP);
+//   console.log("clientIP", clientIP);
+//   console.log("ALLOWED_IP", ALLOWED_IP);
 
   let addr;
 

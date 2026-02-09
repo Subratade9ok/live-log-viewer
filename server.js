@@ -47,12 +47,12 @@ app.get("/api/logs", (req, res) => {
 
 // Socket.IO logic
 io.on("connection", (socket) => {
-  console.log("Client connected:", socket.id);
+  // console.log("Client connected:", socket.id);
   const ip = socket.handshake.address;
-  console.log(`Client IP: ${ip}`);
+  // console.log(`Client IP: ${ip}`);
 
   if(!validateClientIP(socket)) return;
-  console.log("Clients connected:", io.engine.clientsCount);
+  // console.log("Clients connected:", io.engine.clientsCount);
 
 
 
@@ -110,7 +110,7 @@ io.on("connection", (socket) => {
       watchers[socket.id].close();
       delete watchers[socket.id];
     }
-    console.log("Client disconnected:", socket.id);
+    // console.log("Client disconnected:", socket.id);
   });
 });
 
