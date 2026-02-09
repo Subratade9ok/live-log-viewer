@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  logviewer:
+    build: .
+    container_name: logviewer
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs:ro
+    restart: unless-stopped
